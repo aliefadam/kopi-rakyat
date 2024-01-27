@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tugas Akhir Web</title>
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- my css -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="nav-brand">
+                <img src="imgs/nav-logo.png" alt="" />
+                <a href="#home">KOPI RAKYAT</a>
+            </div>
+            <div class="nav-item">
+                <a href="#home">Beranda</a>
+                <a href="#about-us">Tentang Kami</a>
+                <a href="#product">Produk</a>
+                <a href="#contact-us">Hubungi Kami</a>
+            </div>
+            <div class="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <header id="home">
+            <div class="left">
+                <h1>Aroma Sejuta Rasa, <span>Kopi Rakyat Pilihan Utama!</span></h1>
+            </div>
+            <div class="right">
+                <img src="imgs/header.png" alt="" />
+            </div>
+        </header>
+
+        <main>
+            <section class="about-us" id="about-us">
+                <h1>Tentang Kami</h1>
+                <div id="content">
+                    <article>
+                        Kopi Rakyat adalah destinasi kopi yang mempersembahkan pengalaman unik dalam setiap cangkirnya.
+                        Kami dengan bangga menyajikan kopi berkualitas tinggi yang menggambarkan keanekaragaman dan
+                        kekayaan cita rasa dari berbagai pelosok tanah air. Di atmosfer hangat dan ramah, Kopi Rakyat
+                        menjadi tempat pertemuan komunitas, tempat di mana setiap tegukan kopi menjadi alasan untuk
+                        berkumpul.
+                    </article>
+                    <article>
+                        Kopi Rakyat adalah destinasi kopi yang mempersembahkan pengalaman unik dalam setiap cangkirnya.
+                        Kami dengan bangga menyajikan kopi berkualitas tinggi yang menggambarkan keanekaragaman dan
+                        kekayaan cita rasa dari berbagai pelosok tanah air. Di atmosfer hangat dan ramah, Kopi Rakyat
+                        menjadi tempat pertemuan komunitas, tempat di mana setiap tegukan kopi menjadi alasan untuk
+                        berkumpul.
+                    </article>
+                </div>
+            </section>
+            <section class="product" id="product">
+                <h1>Produk</h1>
+                <div class="product-container">
+                    <!-- data kopi ditampilkan dari javascript -->
+                </div>
+
+                <div class="overlay">
+                    <div class="detail-produk">
+                        <div class="left">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="right">
+                            <!-- data detail ditampilkan dari javascript -->
+                            <span class="nama-kopi"></span>
+                            <span class="deskripsi"> </span>
+                            <div class="tablet-view">
+                                <span class="harga"></span>
+                                <div class="close">
+                                    <button>Tutup</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-us" id="contact-us">
+                <h1>Hubungi Kami</h1>
+                <div class="contact-us-item">
+                    <aside>
+                        <img src="imgs/alief.jpeg" alt="" />
+                        <span class="nama-pemilik">Alief Sya'arah Adam</span>
+                        <span class="status">Pemilik</span>
+                        <div class="gmail">
+                            <img src="imgs/gmail-logo.png" alt="" />
+                            <span>aliefadam6@gmail.com</span>
+                        </div>
+                        <div class="wa">
+                            <img src="imgs/whatsapp-logo.png" alt="" />
+                            <span>+62895364711840</span>
+                        </div>
+                    </aside>
+                    <form action="">
+                        <input type="text" placeholder="Nama" />
+                        <input type="text" placeholder="Alamat Email" />
+                        <textarea name="" id="" placeholder="Pesan"></textarea>
+                        <button type="submit">Kirim</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <span>KOPI RAKYAT</span>
+            <span>Copyright &copy; 2024 | Alief Adam</span>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>

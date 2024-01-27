@@ -1,0 +1,787 @@
+:root {
+    --primary: #0b0707;
+    --secondary: #fefed2;
+}
+
+body,
+html,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    background-color: var(--primary);
+}
+
+nav {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 60px;
+
+    .nav-brand a {
+        font-size: 25px;
+        color: var(--secondary);
+        font-weight: 700;
+    }
+
+    .nav-brand img {
+        width: 25px;
+        margin-right: 5px;
+    }
+
+    .nav-item {
+        display: flex;
+        gap: 30px;
+
+        a {
+            font-size: 17px;
+            font-weight: 400;
+            color: var(--secondary);
+            position: relative;
+            transition: 300ms;
+
+            &:hover::after {
+                transform: translateX(-50%) scaleX(1);
+            }
+        }
+
+        a::after {
+            display: block;
+            content: "";
+            width: 50%;
+            border-bottom: 1px solid var(--secondary);
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            transition: 300ms;
+        }
+    }
+
+    .nav-menu {
+        display: none;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+
+    .left {
+        flex: 2;
+
+        h1 {
+            color: var(--secondary);
+            font-weight: 900;
+            font-style: italic;
+            font-size: 45px;
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .right {
+        flex: 1.5;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 90%;
+            filter: saturate(1.2);
+            z-index: -1;
+        }
+    }
+}
+
+main {
+    .about-us {
+        background-color: var(--secondary);
+        padding: 30px 60px;
+
+        h1 {
+            font-size: 35px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        #content {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            article {
+                font-size: 20px;
+                text-align: justify;
+            }
+        }
+    }
+
+    .product {
+        padding: 30px 60px;
+
+        h1 {
+            color: var(--secondary);
+            text-align: center;
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        .product-container {
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+
+            .product-item {
+                width: 317px;
+                background-color: var(--secondary);
+                border-radius: 15px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+
+                img {
+                    border-radius: 15px;
+                    width: 100%;
+                    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.4);
+                }
+
+                span {
+                    font-weight: 600;
+                    font-size: 22px;
+                }
+
+                button {
+                    background-color: transparent;
+                    border: 2px solid var(--primary);
+                    border-radius: 15px;
+                    color: var(--primary);
+                    width: 100%;
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 600;
+                    font-size: 15px;
+                    height: 40px;
+                    transition: 300ms;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: var(--primary);
+                        color: var(--secondary);
+                    }
+                }
+            }
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.9);
+
+            .detail-produk {
+                display: flex;
+                width: 80%;
+                background-color: var(--secondary);
+                padding: 30px;
+                border-radius: 15px;
+                gap: 30px;
+
+                .left {
+                    flex: 1;
+
+                    img {
+                        width: 100%;
+                        border-radius: 15px;
+                        box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.3);
+                    }
+                }
+
+                .right {
+                    flex: 3;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    position: relative;
+
+                    .nama-kopi {
+                        font-size: 30px;
+                        font-weight: 600;
+                    }
+
+                    .deskripsi {
+                        font-weight: 400;
+                    }
+
+                    .harga {
+                        font-style: italic;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+
+                    .close {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+
+                        button {
+                            background-color: var(--primary);
+                            color: var(--secondary);
+                            border: none;
+                            padding: 10px 30px;
+                            border-radius: 5px;
+                            font-family: "Poppins", sans-serif;
+                            font-weight: 600;
+                            cursor: pointer;
+                            transition: 300ms;
+
+                            &:active {
+                                transform: translateY(2px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-us {
+        padding: 30px 60px;
+        background-color: var(--secondary);
+
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        .contact-us-item {
+            margin-top: 30px;
+            display: flex;
+            gap: 30px;
+
+            aside {
+                flex: 2;
+                border-radius: 15px;
+                border: 3px solid var(--primary);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 40px 10px;
+
+                img {
+                    width: 45%;
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+                }
+
+                .nama-pemilik {
+                    font-weight: 600;
+                    font-style: italic;
+                    font-size: 30px;
+                    margin-top: 10px;
+                }
+
+                .status {
+                    font-weight: 400;
+                    font-size: 25px;
+                    margin-top: -5px;
+                    margin-bottom: 10px;
+                }
+
+                .gmail,
+                .wa {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    img {
+                        width: 20px;
+                        box-shadow: unset;
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            form {
+                padding: 20px;
+                flex: 3;
+                border-radius: 15px;
+                border: 3px solid var(--primary);
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                input {
+                    background-color: transparent;
+                    outline: none;
+                    border-radius: 15px;
+                    height: 50px;
+                    font-family: "Poppins", sans-serif;
+                    padding: 5px 10px;
+                    border: 2px solid var(--primary);
+                    font-weight: 600;
+                    font-size: 15px;
+
+                    &::placeholder {
+                        color: var(--primary);
+                    }
+                }
+
+                textarea {
+                    font-size: 15px;
+                    background-color: transparent;
+                    outline: none;
+                    border-radius: 15px;
+                    height: 200px;
+                    font-family: "Poppins", sans-serif;
+                    padding: 10px 10px;
+                    border: 2px solid var(--primary);
+                    font-weight: 600;
+                    resize: none;
+
+                    &::placeholder {
+                        color: var(--primary);
+                    }
+                }
+
+                button {
+                    font-family: "Poppins", sans-serif;
+                    background-color: var(--primary);
+                    color: var(--secondary);
+                    border: none;
+                    border-radius: 15px;
+                    height: 50px;
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span:first-child {
+        font-weight: 800;
+        font-style: italic;
+        font-size: 30px;
+        color: var(--secondary);
+    }
+
+    span:last-child {
+        color: var(--secondary);
+    }
+}
+
+/* tablet */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    nav {
+        padding: 0 20px;
+
+        .nav-brand a {
+            font-size: 20px;
+        }
+
+        .nav-brand img {
+            transform: translateY(1px);
+            margin-right: 3px;
+        }
+
+        .nav-item {
+            gap: 15px;
+
+            a {
+                font-size: 15px;
+            }
+        }
+    }
+
+    header {
+        padding: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        height: 70vh;
+
+        .left {
+            order: 22;
+            flex: 0;
+
+            h1 {
+                font-size: 30px;
+                text-align: center;
+            }
+        }
+
+        .right {
+            flex: 0;
+            height: 400px;
+            order: 1;
+            img {
+                width: 70%;
+                z-index: -1;
+            }
+        }
+    }
+
+    main {
+        .about-us {
+            padding: 20px;
+
+            h1 {
+                font-size: 30px;
+            }
+
+            #content {
+                article {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .product {
+            padding: 20px;
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .product-container {
+                .product-item {
+                    width: 300px;
+                    padding: 20px;
+                }
+            }
+
+            .overlay {
+                .detail-produk {
+                    width: 80%;
+
+                    .right {
+                        position: static;
+
+                        .nama-kopi {
+                            font-size: 25px;
+                        }
+
+                        .tablet-view {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+                        .close {
+                            display: block;
+                            position: static;
+                            width: fit-content;
+
+                            button {
+                                padding: 10px 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact-us {
+            padding: 20px;
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .contact-us-item {
+                gap: 20px;
+            }
+
+            .contact-us-item aside {
+                img {
+                    width: 60%;
+                }
+
+                .nama-pemilik {
+                    font-size: 20px;
+                }
+
+                .status {
+                    font-size: 15px;
+                }
+
+                .gmail,
+                .wa {
+                    img {
+                        width: 15px;
+                    }
+                    span {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 480px) {
+    nav {
+        padding: 0 15px;
+
+        .nav-brand a {
+            font-size: 20px;
+        }
+
+        .nav-brand img {
+            transform: translateY(1px);
+            margin-right: 3px;
+        }
+
+        .nav-item {
+            cursor: pointer;
+            position: absolute;
+            z-index: 99;
+            top: -250px;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            padding: 20px;
+            background-color: var(--primary);
+            transition: 300ms;
+
+            a {
+                &::after {
+                    display: none;
+                }
+            }
+
+            &.active {
+                top: 70px;
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            span {
+                display: block;
+                width: 30px;
+                height: 5px;
+                background-color: var(--secondary);
+                transition: 300ms;
+
+                &.active:first-child {
+                    transform-origin: 0 0;
+                    transform: rotate(45deg) translate(2px, -3px);
+                }
+                &.active:nth-child(2) {
+                    transform-origin: 100 100;
+                    transform: scale(0);
+                }
+                &.active:last-child {
+                    transform-origin: 0 0;
+                    transform: rotate(-45deg) translateY(2px) translateX(-1px);
+                }
+            }
+        }
+    }
+
+    header {
+        padding: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        .left {
+            order: 2;
+            flex: 0;
+
+            h1 {
+                font-size: 22px;
+                text-align: center;
+            }
+        }
+
+        .right {
+            flex: 0;
+            height: 400px;
+            order: 1;
+            img {
+                width: 70%;
+                z-index: -1;
+            }
+        }
+    }
+
+    main {
+        .about-us {
+            padding: 20px;
+
+            h1 {
+                font-size: 25px;
+            }
+
+            #content {
+                article {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .product {
+            padding: 20px 5px;
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .product-container {
+                .product-item {
+                    width: 100%;
+                    padding: 20px;
+                }
+            }
+
+            .overlay {
+                .detail-produk {
+                    width: 90%;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .right {
+                        position: static;
+
+                        .nama-kopi {
+                            font-size: 25px;
+                        }
+
+                        .close {
+                            margin-top: 15px;
+                            position: static;
+                            justify-content: flex-start;
+
+                            button {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact-us {
+            padding: 20px;
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .contact-us-item {
+                flex-direction: column;
+
+                aside {
+                    img {
+                        width: 50%;
+                    }
+
+                    .nama-pemilik {
+                        font-size: 20px;
+                    }
+
+                    .status {
+                        font-size: 15px;
+                    }
+
+                    .gmail,
+                    .wa {
+                        img {
+                            width: 15px;
+                        }
+                        span {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                form {
+                    padding: 15px;
+                }
+            }
+        }
+    }
+
+    footer {
+        span:first-child {
+            font-size: 20px;
+        }
+
+        span:last-child {
+            font-size: 15px;
+        }
+    }
+}
+
+/* animasi */
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
