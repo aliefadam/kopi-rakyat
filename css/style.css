@@ -33,364 +33,362 @@ nav {
     align-items: center;
     height: 70px;
     padding: 0 60px;
-
-    .nav-brand a {
-        font-size: 25px;
-        color: var(--secondary);
-        font-weight: 700;
-    }
-
-    .nav-brand img {
-        width: 25px;
-        margin-right: 5px;
-    }
-
-    .nav-item {
-        display: flex;
-        gap: 30px;
-
-        a {
-            font-size: 17px;
-            font-weight: 400;
-            color: var(--secondary);
-            position: relative;
-            transition: 300ms;
-
-            &:hover::after {
-                transform: translateX(-50%) scaleX(1);
-            }
-        }
-
-        a::after {
-            display: block;
-            content: "";
-            width: 50%;
-            border-bottom: 1px solid var(--secondary);
-            position: absolute;
-            bottom: -4px;
-            left: 50%;
-            transform: translateX(-50%) scaleX(0);
-            transition: 300ms;
-        }
-    }
-
-    .nav-menu {
-        display: none;
-    }
 }
 
+nav .nav-brand a {
+    font-size: 25px;
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+nav .nav-brand img {
+    width: 25px;
+    margin-right: 5px;
+}
+
+nav .nav-item {
+    display: flex;
+    gap: 30px;
+}
+
+nav .nav-item a {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--secondary);
+    position: relative;
+    transition: 300ms;
+}
+
+nav .nav-item a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+nav .nav-item a::after {
+    display: block;
+    content: "";
+    width: 50%;
+    border-bottom: 1px solid var(--secondary);
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transition: 300ms;
+}
+
+nav .nav-menu {
+    display: none;
+}
 header {
     height: 100vh;
     display: flex;
     align-items: center;
     padding: 0 60px;
-
-    .left {
-        flex: 2;
-
-        h1 {
-            color: var(--secondary);
-            font-weight: 900;
-            font-style: italic;
-            font-size: 45px;
-
-            span {
-                display: block;
-            }
-        }
-    }
-
-    .right {
-        flex: 1.5;
-        display: flex;
-        justify-content: center;
-
-        img {
-            width: 90%;
-            filter: saturate(1.2);
-            z-index: -1;
-        }
-    }
 }
 
-main {
-    .about-us {
-        background-color: var(--secondary);
-        padding: 30px 60px;
+header .left {
+    flex: 2;
+}
 
-        h1 {
-            font-size: 35px;
-            font-weight: 700;
-            text-align: center;
-        }
+header .left h1 {
+    color: var(--secondary);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 45px;
+}
 
-        #content {
-            margin: 20px 0;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+header .left h1 span {
+    display: block;
+}
 
-            article {
-                font-size: 20px;
-                text-align: justify;
-            }
-        }
-    }
+header .right {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+}
 
-    .product {
-        padding: 30px 60px;
+header .right img {
+    width: 90%;
+    filter: saturate(1.2);
+    z-index: -1;
+}
 
-        h1 {
-            color: var(--secondary);
-            text-align: center;
-            font-size: 35px;
-            font-weight: 700;
-        }
+main .about-us {
+    background-color: var(--secondary);
+    padding: 30px 60px;
+}
 
-        .product-container {
-            margin: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
+main .about-us h1 {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
 
-            .product-item {
-                width: 317px;
-                background-color: var(--secondary);
-                border-radius: 15px;
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                align-items: center;
+main .about-us #content {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-                img {
-                    border-radius: 15px;
-                    width: 100%;
-                    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.4);
-                }
+main .about-us #content article {
+    font-size: 20px;
+    text-align: justify;
+}
 
-                span {
-                    font-weight: 600;
-                    font-size: 22px;
-                }
+main .product {
+    padding: 30px 60px;
+}
 
-                button {
-                    background-color: transparent;
-                    border: 2px solid var(--primary);
-                    border-radius: 15px;
-                    color: var(--primary);
-                    width: 100%;
-                    font-family: "Poppins", sans-serif;
-                    font-weight: 600;
-                    font-size: 15px;
-                    height: 40px;
-                    transition: 300ms;
-                    cursor: pointer;
+main .product h1 {
+    color: var(--secondary);
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
 
-                    &:hover {
-                        background-color: var(--primary);
-                        color: var(--secondary);
-                    }
-                }
-            }
-        }
+main .product .product-container {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
 
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            z-index: 9999;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.9);
+main .product .product-container .product-item {
+    width: 317px;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
 
-            .detail-produk {
-                display: flex;
-                width: 80%;
-                background-color: var(--secondary);
-                padding: 30px;
-                border-radius: 15px;
-                gap: 30px;
+main .product .product-container .product-item img {
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.4);
+}
 
-                .left {
-                    flex: 1;
+main .product .product-container .product-item span {
+    font-weight: 600;
+    font-size: 22px;
+}
 
-                    img {
-                        width: 100%;
-                        border-radius: 15px;
-                        box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.3);
-                    }
-                }
+main .product .product-container .product-item button {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+    color: var(--primary);
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    height: 40px;
+    transition: 300ms;
+    cursor: pointer;
+}
 
-                .right {
-                    flex: 3;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-                    position: relative;
+main .product .product-container .product-item button:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
 
-                    .nama-kopi {
-                        font-size: 30px;
-                        font-weight: 600;
-                    }
+main .product .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
 
-                    .deskripsi {
-                        font-weight: 400;
-                    }
+main .product .overlay .detail-produk {
+    display: flex;
+    width: 80%;
+    background-color: var(--secondary);
+    padding: 30px;
+    border-radius: 15px;
+    gap: 30px;
+}
 
-                    .harga {
-                        font-style: italic;
-                        font-size: 20px;
-                        font-weight: 600;
-                    }
+main .product .overlay .detail-produk .left {
+    flex: 1;
+}
 
-                    .close {
-                        position: absolute;
-                        bottom: 0;
-                        width: 100%;
-                        display: flex;
-                        justify-content: flex-end;
+main .product .overlay .detail-produk .left img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.3);
+}
 
-                        button {
-                            background-color: var(--primary);
-                            color: var(--secondary);
-                            border: none;
-                            padding: 10px 30px;
-                            border-radius: 5px;
-                            font-family: "Poppins", sans-serif;
-                            font-weight: 600;
-                            cursor: pointer;
-                            transition: 300ms;
+main .product .overlay .detail-produk .right {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
 
-                            &:active {
-                                transform: translateY(2px);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+main .product .overlay .detail-produk .right .nama-kopi {
+    font-size: 30px;
+    font-weight: 600;
+}
 
-    .contact-us {
-        padding: 30px 60px;
-        background-color: var(--secondary);
+main .product .overlay .detail-produk .right .deskripsi {
+    font-weight: 400;
+}
 
-        h1 {
-            color: var(--primary);
-            text-align: center;
-            font-size: 35px;
-            font-weight: 700;
-        }
+main .product .overlay .detail-produk .right .harga {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
+}
 
-        .contact-us-item {
-            margin-top: 30px;
-            display: flex;
-            gap: 30px;
+main .product .overlay .detail-produk .right .close {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
 
-            aside {
-                flex: 2;
-                border-radius: 15px;
-                border: 3px solid var(--primary);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 40px 10px;
+main .product .overlay .detail-produk .right .close button {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 300ms;
+}
 
-                img {
-                    width: 45%;
-                    border-radius: 50%;
-                    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
-                }
+main .product .overlay .detail-produk .right .close button:active {
+    transform: translateY(2px);
+}
 
-                .nama-pemilik {
-                    font-weight: 600;
-                    font-style: italic;
-                    font-size: 30px;
-                    margin-top: 10px;
-                }
+main .contact-us {
+    padding: 30px 60px;
+    background-color: var(--secondary);
+}
 
-                .status {
-                    font-weight: 400;
-                    font-size: 25px;
-                    margin-top: -5px;
-                    margin-bottom: 10px;
-                }
+main .contact-us h1 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
 
-                .gmail,
-                .wa {
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
+main .contact-us .contact-us-item {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+}
 
-                    img {
-                        width: 20px;
-                        box-shadow: unset;
-                        border-radius: 0;
-                    }
-                }
-            }
+main .contact-us .contact-us-item aside {
+    flex: 2;
+    border-radius: 15px;
+    border: 3px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10px;
+}
 
-            form {
-                padding: 20px;
-                flex: 3;
-                border-radius: 15px;
-                border: 3px solid var(--primary);
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
+main .contact-us .contact-us-item aside img {
+    width: 45%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+}
 
-                input {
-                    background-color: transparent;
-                    outline: none;
-                    border-radius: 15px;
-                    height: 50px;
-                    font-family: "Poppins", sans-serif;
-                    padding: 5px 10px;
-                    border: 2px solid var(--primary);
-                    font-weight: 600;
-                    font-size: 15px;
+main .contact-us .contact-us-item aside .nama-pemilik {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 30px;
+    margin-top: 10px;
+}
 
-                    &::placeholder {
-                        color: var(--primary);
-                    }
-                }
+main .contact-us .contact-us-item aside .status {
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
 
-                textarea {
-                    font-size: 15px;
-                    background-color: transparent;
-                    outline: none;
-                    border-radius: 15px;
-                    height: 200px;
-                    font-family: "Poppins", sans-serif;
-                    padding: 10px 10px;
-                    border: 2px solid var(--primary);
-                    font-weight: 600;
-                    resize: none;
+main .contact-us .contact-us-item aside .gmail,
+main .contact-us .contact-us-item aside .wa {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-                    &::placeholder {
-                        color: var(--primary);
-                    }
-                }
+main .contact-us .contact-us-item aside .gmail img,
+main .contact-us .contact-us-item aside .wa img {
+    width: 20px;
+    box-shadow: unset;
+    border-radius: 0;
+}
 
-                button {
-                    font-family: "Poppins", sans-serif;
-                    background-color: var(--primary);
-                    color: var(--secondary);
-                    border: none;
-                    border-radius: 15px;
-                    height: 50px;
-                    font-weight: 600;
-                    font-size: 15px;
-                }
-            }
-        }
-    }
+main .contact-us .contact-us-item form {
+    padding: 20px;
+    flex: 3;
+    border-radius: 15px;
+    border: 3px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .contact-us .contact-us-item form input {
+    background-color: transparent;
+    outline: none;
+    border-radius: 15px;
+    height: 50px;
+    font-family: "Poppins", sans-serif;
+    padding: 5px 10px;
+    border: 2px solid var(--primary);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+main .contact-us .contact-us-item form input::placeholder {
+    color: var(--primary);
+}
+
+main .contact-us .contact-us-item form textarea {
+    font-size: 15px;
+    background-color: transparent;
+    outline: none;
+    border-radius: 15px;
+    height: 200px;
+    font-family: "Poppins", sans-serif;
+    padding: 10px 10px;
+    border: 2px solid var(--primary);
+    font-weight: 600;
+    resize: none;
+}
+
+main .contact-us .contact-us-item form textarea::placeholder {
+    color: var(--primary);
+}
+
+main .contact-us .contact-us-item form button {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: none;
+    border-radius: 15px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 footer {
@@ -398,40 +396,40 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
-    span:first-child {
-        font-weight: 800;
-        font-style: italic;
-        font-size: 30px;
-        color: var(--secondary);
-    }
+footer span:first-child {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 30px;
+    color: var(--secondary);
+}
 
-    span:last-child {
-        color: var(--secondary);
-    }
+footer span:last-child {
+    color: var(--secondary);
 }
 
 /* tablet */
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
     nav {
         padding: 0 20px;
+    }
 
-        .nav-brand a {
-            font-size: 20px;
-        }
+    nav .nav-brand a {
+        font-size: 20px;
+    }
 
-        .nav-brand img {
-            transform: translateY(1px);
-            margin-right: 3px;
-        }
+    nav .nav-brand img {
+        transform: translateY(1px);
+        margin-right: 3px;
+    }
 
-        .nav-item {
-            gap: 15px;
+    nav .nav-item {
+        gap: 15px;
+    }
 
-            a {
-                font-size: 15px;
-            }
-        }
+    nav .nav-item a {
+        font-size: 15px;
     }
 
     header {
@@ -441,123 +439,114 @@ footer {
         justify-content: center;
         gap: 10px;
         height: 70vh;
-
-        .left {
-            order: 22;
-            flex: 0;
-
-            h1 {
-                font-size: 30px;
-                text-align: center;
-            }
-        }
-
-        .right {
-            flex: 0;
-            height: 400px;
-            order: 1;
-            img {
-                width: 70%;
-                z-index: -1;
-            }
-        }
     }
 
-    main {
-        .about-us {
-            padding: 20px;
+    header .left {
+        order: 22;
+        flex: 0;
+    }
 
-            h1 {
-                font-size: 30px;
-            }
+    header .left h1 {
+        font-size: 30px;
+        text-align: center;
+    }
 
-            #content {
-                article {
-                    font-size: 20px;
-                }
-            }
-        }
+    header .right {
+        flex: 0;
+        height: 400px;
+        order: 1;
+    }
 
-        .product {
-            padding: 20px;
+    header .right img {
+        width: 70%;
+        z-index: -1;
+    }
 
-            h1 {
-                font-size: 30px;
-            }
+    main .about-us {
+        padding: 20px;
+    }
 
-            .product-container {
-                .product-item {
-                    width: 300px;
-                    padding: 20px;
-                }
-            }
+    main .about-us h1 {
+        font-size: 30px;
+    }
 
-            .overlay {
-                .detail-produk {
-                    width: 80%;
+    main .about-us #content article {
+        font-size: 20px;
+    }
 
-                    .right {
-                        position: static;
+    main .product {
+        padding: 20px;
+    }
 
-                        .nama-kopi {
-                            font-size: 25px;
-                        }
+    main .product h1 {
+        font-size: 30px;
+    }
 
-                        .tablet-view {
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                        }
+    main .product .product-container .product-item {
+        width: 300px;
+        padding: 20px;
+    }
 
-                        .close {
-                            display: block;
-                            position: static;
-                            width: fit-content;
+    main .product .overlay .detail-produk {
+        width: 80%;
+    }
 
-                            button {
-                                padding: 10px 30px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    main .product .overlay .detail-produk .right {
+        position: static;
+    }
 
-        .contact-us {
-            padding: 20px;
+    main .product .overlay .detail-produk .right .nama-kopi {
+        font-size: 25px;
+    }
 
-            h1 {
-                font-size: 30px;
-            }
+    main .product .overlay .detail-produk .right .tablet-view {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-            .contact-us-item {
-                gap: 20px;
-            }
+    main .product .overlay .detail-produk .right .close {
+        display: block;
+        position: static;
+        width: fit-content;
+    }
 
-            .contact-us-item aside {
-                img {
-                    width: 60%;
-                }
+    main .product .overlay .detail-produk .right .close button {
+        padding: 10px 30px;
+    }
 
-                .nama-pemilik {
-                    font-size: 20px;
-                }
+    main .contact-us {
+        padding: 20px;
+    }
 
-                .status {
-                    font-size: 15px;
-                }
+    main .contact-us h1 {
+        font-size: 30px;
+    }
 
-                .gmail,
-                .wa {
-                    img {
-                        width: 15px;
-                    }
-                    span {
-                        font-size: 15px;
-                    }
-                }
-            }
-        }
+    main .contact-us .contact-us-item {
+        gap: 20px;
+    }
+
+    main .contact-us .contact-us-item aside img {
+        width: 60%;
+    }
+
+    main .contact-us .contact-us-item aside .nama-pemilik {
+        font-size: 20px;
+    }
+
+    main .contact-us .contact-us-item aside .status {
+        font-size: 15px;
+    }
+
+    main .contact-us .contact-us-item aside .gmail img,
+    main .contact-us .contact-us-item aside .wa img {
+        width: 15px;
+    }
+
+    main .contact-us .contact-us-item aside .gmail span,
+    main .contact-us .contact-us-item aside .wa span {
+        font-size: 15px;
     }
 }
 
@@ -565,65 +554,65 @@ footer {
 @media only screen and (max-width: 480px) {
     nav {
         padding: 0 15px;
+    }
 
-        .nav-brand a {
-            font-size: 20px;
-        }
+    nav .nav-brand a {
+        font-size: 20px;
+    }
 
-        .nav-brand img {
-            transform: translateY(1px);
-            margin-right: 3px;
-        }
+    nav .nav-brand img {
+        transform: translateY(1px);
+        margin-right: 3px;
+    }
 
-        .nav-item {
-            cursor: pointer;
-            position: absolute;
-            z-index: 99;
-            top: -250px;
-            left: 0;
-            width: 100%;
-            flex-direction: column;
-            padding: 20px;
-            background-color: var(--primary);
-            transition: 300ms;
+    nav .nav-item {
+        cursor: pointer;
+        position: absolute;
+        z-index: 99;
+        top: -250px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        background-color: var(--primary);
+        transition: 300ms;
+    }
 
-            a {
-                &::after {
-                    display: none;
-                }
-            }
+    nav .nav-item a::after {
+        display: none;
+    }
 
-            &.active {
-                top: 70px;
-            }
-        }
+    nav .nav-item.active {
+        top: 70px;
+    }
 
-        .nav-menu {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
+    nav .nav-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
 
-            span {
-                display: block;
-                width: 30px;
-                height: 5px;
-                background-color: var(--secondary);
-                transition: 300ms;
+    nav .nav-menu span {
+        display: block;
+        width: 30px;
+        height: 5px;
+        background-color: var(--secondary);
+        transition: 300ms;
+    }
 
-                &.active:first-child {
-                    transform-origin: 0 0;
-                    transform: rotate(45deg) translate(2px, -3px);
-                }
-                &.active:nth-child(2) {
-                    transform-origin: 100 100;
-                    transform: scale(0);
-                }
-                &.active:last-child {
-                    transform-origin: 0 0;
-                    transform: rotate(-45deg) translateY(2px) translateX(-1px);
-                }
-            }
-        }
+    nav .nav-menu span.active:first-child {
+        transform-origin: 0 0;
+        transform: rotate(45deg) translate(2px, -3px);
+    }
+
+    nav .nav-menu span.active:nth-child(2) {
+        transform-origin: 100% 100%;
+        transform: scale(0);
+    }
+
+    nav .nav-menu span.active:last-child {
+        transform-origin: 0 0;
+        transform: rotate(-45deg) translateY(2px) translateX(-1px);
     }
 
     header {
@@ -632,133 +621,122 @@ footer {
         flex-direction: column;
         justify-content: center;
         gap: 10px;
-
-        .left {
-            order: 2;
-            flex: 0;
-
-            h1 {
-                font-size: 22px;
-                text-align: center;
-            }
-        }
-
-        .right {
-            flex: 0;
-            height: 400px;
-            order: 1;
-            img {
-                width: 70%;
-                z-index: -1;
-            }
-        }
     }
 
-    main {
-        .about-us {
-            padding: 20px;
-
-            h1 {
-                font-size: 25px;
-            }
-
-            #content {
-                article {
-                    font-size: 15px;
-                }
-            }
-        }
-
-        .product {
-            padding: 20px 5px;
-
-            h1 {
-                font-size: 25px;
-            }
-
-            .product-container {
-                .product-item {
-                    width: 100%;
-                    padding: 20px;
-                }
-            }
-
-            .overlay {
-                .detail-produk {
-                    width: 90%;
-                    flex-direction: column;
-                    gap: 10px;
-
-                    .right {
-                        position: static;
-
-                        .nama-kopi {
-                            font-size: 25px;
-                        }
-
-                        .close {
-                            margin-top: 15px;
-                            position: static;
-                            justify-content: flex-start;
-
-                            button {
-                                width: 100%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .contact-us {
-            padding: 20px;
-
-            h1 {
-                font-size: 25px;
-            }
-
-            .contact-us-item {
-                flex-direction: column;
-
-                aside {
-                    img {
-                        width: 50%;
-                    }
-
-                    .nama-pemilik {
-                        font-size: 20px;
-                    }
-
-                    .status {
-                        font-size: 15px;
-                    }
-
-                    .gmail,
-                    .wa {
-                        img {
-                            width: 15px;
-                        }
-                        span {
-                            font-size: 15px;
-                        }
-                    }
-                }
-
-                form {
-                    padding: 15px;
-                }
-            }
-        }
+    header .left {
+        order: 2;
+        flex: 0;
     }
 
-    footer {
-        span:first-child {
-            font-size: 20px;
-        }
+    header .left h1 {
+        font-size: 22px;
+        text-align: center;
+    }
 
-        span:last-child {
-            font-size: 15px;
-        }
+    header .right {
+        flex: 0;
+        height: 400px;
+        order: 1;
+    }
+
+    header .right img {
+        width: 70%;
+        z-index: -1;
+    }
+
+    main .about-us {
+        padding: 20px;
+    }
+
+    main .about-us h1 {
+        font-size: 25px;
+    }
+
+    main .about-us #content article {
+        font-size: 15px;
+    }
+
+    main .product {
+        padding: 20px 5px;
+    }
+
+    main .product h1 {
+        font-size: 25px;
+    }
+
+    main .product .product-container .product-item {
+        width: 100%;
+        padding: 20px;
+    }
+
+    main .product .overlay .detail-produk {
+        width: 90%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main .product .overlay .detail-produk .right {
+        position: static;
+    }
+
+    main .product .overlay .detail-produk .right .nama-kopi {
+        font-size: 25px;
+    }
+
+    main .product .overlay .detail-produk .right .close {
+        margin-top: 15px;
+        position: static;
+        justify-content: flex-start;
+    }
+
+    main .product .overlay .detail-produk .right .close button {
+        width: 100%;
+    }
+
+    main .contact-us {
+        padding: 20px;
+    }
+
+    main .contact-us h1 {
+        font-size: 25px;
+    }
+
+    main .contact-us .contact-us-item {
+        flex-direction: column;
+    }
+
+    main .contact-us .contact-us-item aside img {
+        width: 50%;
+    }
+
+    main .contact-us .contact-us-item aside .nama-pemilik {
+        font-size: 20px;
+    }
+
+    main .contact-us .contact-us-item aside .status {
+        font-size: 15px;
+    }
+
+    main .contact-us .contact-us-item aside .gmail img,
+    main .contact-us .contact-us-item aside .wa img {
+        width: 15px;
+    }
+
+    main .contact-us .contact-us-item aside .gmail span,
+    main .contact-us .contact-us-item aside .wa span {
+        font-size: 15px;
+    }
+
+    main .contact-us .contact-us-item form {
+        padding: 15px;
+    }
+
+    footer span:first-child {
+        font-size: 20px;
+    }
+
+    footer span:last-child {
+        font-size: 15px;
     }
 }
 
